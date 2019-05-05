@@ -1,0 +1,50 @@
+<xs:schema targetNamespace="http://www.radiantsage.com"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" xmlns:rs="http://www.radiantsage.com">
+	<xs:simpleType name="EmpNoType">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1" />
+			<xs:maxInclusive value="100" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-zA-Z])*" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GenderType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Male" />
+			<xs:enumeration value="Female" />
+			<xs:enumeration value="Others" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SalaryType">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PhoneNumberType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{10}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="employees">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee" minOccurs="1"
+					maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="empno" type="rs:EmpNoType" />
+							<xs:element name="name" type="rs:NameType" />
+							<xs:element name="gender" type="rs:GenderType" />
+							<xs:element name="salary" type="rs:SalaryType" />
+							<xs:element name="phone" type="rs:PhoneNumberType" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

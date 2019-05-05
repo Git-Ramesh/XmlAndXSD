@@ -1,0 +1,5 @@
+<employee xmlns="http://www.radiantsage.com">
+	<empno>100</empno>
+	<name>Ramesh</name>
+	<salary>56220</salary>
+</employee>

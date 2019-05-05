@@ -1,0 +1,39 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:rs="http://www.radiantsage.com"
+	targetNamespace="http://www.radiantsage.com"
+	elementFormDefault="qualified">
+	<xs:simpleType name="RunningRace">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="100Miters" />
+			<xs:enumeration value="200Miters" />
+			<xs:enumeration value="300Miters" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Gymnastics">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Floor" />
+			<xs:enumeration value="Rings" />
+			<xs:enumeration value="Beam" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EventType">
+		<xs:union memberTypes="rs:RunningRace rs:Gymnastics" />
+	</xs:simpleType>
+	<xs:element name="program">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="event" type="rs:EventType"
+					minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="employee">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="empno" type="xs:int" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="salary" type="xs:decimal" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

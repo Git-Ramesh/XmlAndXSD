@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	targetNamespace="http://www.radiantsage.com">
+	<xs:element name="books">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="book" minOccurs="1"
+					maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" minOccurs="1" maxOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="([a-zA-Z])*"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="publisher" type="xs:string"
+								minOccurs="0" maxOccurs="1" />
+							<xs:element name="price" minOccurs="1" maxOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:fractionDigits value="2" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="author" type="xs:string"
+								minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+						<xs:attribute name="isbn" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

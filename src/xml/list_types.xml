@@ -1,0 +1,8 @@
+<employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.radiantsage.com">
+	<empno>101</empno>
+	<name>Ramesh</name>
+	<salary>56225</salary>
+	<vacationDays>2019-04-13 2019-04-18</vacationDays>
+	<phoneNumbers>8106067236 8525223651</phoneNumbers>
+</employee>

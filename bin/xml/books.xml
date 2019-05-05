@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns="http://www.radiantsage.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.radiantsage.com D:\\Eclipse Workspace\\WebServices-20190428\\XmlAndXSD\\src\\xml\\employees.xsd">
+	<book isbn="100">
+		<name>WebService</name>
+		<publisher>RadiantSage</publisher>
+		<price>653.23</price>
+		<author>Ramesh</author>
+	</book>
+</books>

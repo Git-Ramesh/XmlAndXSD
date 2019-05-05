@@ -1,0 +1,12 @@
+<employees 
+	xmlns="http://www.radiantsage.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.radiantsage.com D:\Eclipse Workspace\WebServices-20190428\XmlAndXSD\src\employees.xsd">
+	<employee>
+		<empno>1</empno>
+		<name>Ramesh</name>
+		<gender>Male</gender>
+		<salary>2330</salary>
+		<phone>8106067236</phone>
+	</employee>
+</employees>

@@ -1,0 +1,21 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.radiantsage.com"
+	elementFormDefault="qualified" xmlns:rs="http://www.radiantsage.com">
+	<xs:simpleType name="DateList">
+		<xs:list itemType="xs:date" />
+	</xs:simpleType>
+	<xs:simpleType name="ContactList">
+		<xs:list itemType="xs:string" />
+	</xs:simpleType>
+	<xs:element name="employee">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="empno" type="xs:int" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="salary" type="xs:decimal" />
+				<xs:element name="vacationDays" type="rs:DateList" />
+				<xs:element name="phoneNumbers" type="rs:ContactList" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
